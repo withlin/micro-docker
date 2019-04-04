@@ -14,7 +14,7 @@ import (
 //Mount Namespace 是Linux第一个实现的Namesapce类型，因此，它的系统调用参数是NEWNS（NEW Namesapce）的缩写
 func main (){
 	cmd := exec.Command("sh")
-	cmd.Procattr=&syscall.ProceAttr{
+	cmd.ProcAttr=&syscall.ProceAttr{
 		CloneFlags:syscall.CLONE_NEWUTC | syscall.CLONE_NEWIPC | syscall.CLONE_NEWPID | syscall.CLONE_NEWNS
 	}
 	cmd.Stdin = os.Stdin
