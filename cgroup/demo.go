@@ -29,7 +29,7 @@ func main() {
 
 	cmd := exec.Command("proc/self/exe")
 	cmd.SysProcAttr = &syscall.SysProcAttr{
-		Cloneflag: syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID | syscall.CLONE_NEWNS,
+		Cloneflags: syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID | syscall.CLONE_NEWNS,
 	}
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
