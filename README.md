@@ -39,6 +39,9 @@ USER Namespace    | CLONE_NEWUSER | 3.8     |
   cgroup1中对CPU使用率的限制，并且增加了磁盘IO的限制而不影响到cgroup1中的其他进程。
 
 
+* 系统在创建新的hierarchy之后，系统所有的进程都会加入这个hierarchy的cgroup根节点，
+  这个cgroup根节点是hierarchy默认创建的。
+
 * 一个subsystem只能附加到一个hierarchy上面。
 
 * 一个heirarchy可以附加多个subsystem。
